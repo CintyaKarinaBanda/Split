@@ -1,1 +1,1 @@
-{"name":"split-api","private":true,"type":"module","scripts":{"dev":"node --watch index.js","start":"node index.js","test":"node --test"},"dependencies":{"cors":"^2.8.5","express":"^4.21.2"},"engines":{"node":">=22.13.0"}}
+{"name":"split-api","private":true,"type":"module","scripts":{"dev":"node --watch index.js","start":"node index.js","test":"node --test"},"dependencies":{"@libsql/client":"^0.18.0","cors":"^2.8.5","express":"^4.21.2"},"engines":{"node":">=22.13.0"}}

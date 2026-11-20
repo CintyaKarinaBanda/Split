@@ -2,19 +2,17 @@ services:
   - type: web
     name: split
     runtime: node
-    plan: starter
+    plan: free
     numInstances: 1
     buildCommand: npm ci --prefix server --omit=dev && npm ci --prefix client --include=dev && npm run build
     startCommand: npm start
     healthCheckPath: /api/health
-    disk:
-      name: split-data
-      mountPath: /var/data
-      sizeGB: 1
     envVars:
       - key: NODE_VERSION
         value: 24.17.0
-      - key: DB_PATH
-        value: /var/data/split.sqlite
+      - key: TURSO_DATABASE_URL
+        sync: false
+      - key: TURSO_AUTH_TOKEN
+        sync: false
       - key: SPLIT_OWNER_KEY
         sync: false
